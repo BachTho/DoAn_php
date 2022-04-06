@@ -66,6 +66,15 @@ require_once('views/partials/Headeruser.php');
                                             <h4><?= $product['product_name'] ?></h4>
                                         </a>
                                         <div class="mt-3">
+                                        <div class="row">
+
+<div class="col">
+    <p> Số lượng còn lại: <b><?= $product['amount'] ?> </b></p>
+</div>
+<div class="col">
+    <p> Đã bán: <b><?= $product['sold'] ?> </b></p>
+</div>
+</div>
                                             <span class="mr-4"><?= number_format($product['promotionalprice']) ?> đ</span>
                                             <del><?= number_format($product['originalprice']) ?> đ</del>
                                         </div>

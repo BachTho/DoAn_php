@@ -25,7 +25,7 @@ function listcategories()
 function listproducts()
 {
 	$ProductModel = new Product();
-	$products = $ProductModel->getList();
+	$products = $ProductModel->getPostsbyAmount();
 	return $products;
 }
 function Sum($id)

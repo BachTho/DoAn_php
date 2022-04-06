@@ -65,7 +65,10 @@
 						<div class="row w-100 mr-0">
 							<div class="col-lg-7 pr-0">
 								<ul class="nav navbar-nav center_nav pull-right">
-									<li class="nav-item active">
+									<li class="nav-item  <?php if(basename($_SERVER['PHP_SELF'])=="aboutus.php"){echo "active"; 
+									}else {
+										echo "aa";
+									} ?> ">
 										<a class="nav-link" href="index.php">Trang chủ</a>
 									</li>
 									<li class="nav-item submenu dropdown">
@@ -79,7 +82,7 @@
 
 										</ul>
 									</li>
-									<li class="nav-item">
+									<li class="nav-item ">
 										<a class="nav-link" href="index.php?mod=home&act=listProduct">Sản phẩm</a>
 									</li>
 

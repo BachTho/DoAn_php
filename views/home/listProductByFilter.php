@@ -54,7 +54,7 @@ require_once('views/partials/Headeruser.php');
                                             <a href="index.php?mod=home&act=detailProduct&id=<?= $product['id'] ?>">
                                                 <i class="ti-eye"></i>
                                             </a>
-                                           
+
                                             <a href="index.php?mod=home&act=listCart&action=1&msp=<?= $product['id'] ?> ">
                                                 <i class="ti-shopping-cart"></i>
                                             </a>
@@ -65,6 +65,14 @@ require_once('views/partials/Headeruser.php');
                                             <h4><?= $product['product_name'] ?></h4>
                                         </a>
                                         <div class="mt-3">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p> Số lượng còn lại: <b><?= $product['amount'] ?> </b></p>
+                                                </div>
+                                                <div class="col">
+                                                    Đã bán: <b><?= $product['sold'] ?> </b>
+                                                </div>
+                                            </div>
                                             <span class="mr-4"><?= number_format($product['promotionalprice']) ?> đ</span>
                                             <del><?= number_format($product['originalprice']) ?> đ</del>
                                         </div>

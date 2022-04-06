@@ -52,11 +52,11 @@ require_once('views/partials/Headeruser.php');
                                 <?php  foreach ($item as  $value) { ?>
                                    
                                         <a href="#"><?=  $value['product_name'] ?>
-                                            <span class="middle">x<?= $value['amount'] ?></span>
-                                            <span class="last"><?= number_format($value['amount'] * $value['promotionalprice']) ?> đ</span>
+                                            <span class="middle">x<?= $value['soluong'] ?></span>
+                                            <span class="last"><?= number_format($value['soluong'] * $value['promotionalprice']) ?> đ</span>
                                         </a>
                                         <input type="hidden" name="masp[]" value="<?= $value['id']?>">
-                                        <input type="hidden" name="soluong[]" value="<?= $value['amount'] ?>">
+                                        <input type="hidden" name="soluong[]" value="<?= $value['soluong'] ?>">
                                     <?php } ?>
                                 </li>
                             </ul>

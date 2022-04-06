@@ -65,7 +65,7 @@ class HomeController extends BaseController
 	{
 		$id = $_POST['product_name'];
 		$ProductModel = new Product();
-		$ListProductsBySearch = $ProductModel->findproductsadmin($id);
+		$ListProductsBySearch = $ProductModel->findproductsFrontEnd($id);
 		$success = $ListProductsBySearch;
 		if ($success) {
 			setcookie('success', 'Thêm mới thành công', time() + 3);
@@ -157,34 +157,22 @@ class HomeController extends BaseController
 		}
 		require_once('views/home/listCart.php');
 	}
-	public function Order1()
+	public function notification()
 	{
-		$_SESSION['success']['cart'] =  'Sản phẩmsaass đã bị xóa khỏi giỏi hàng';
+		$_SESSION['error']['cart'] =  'Sản phẩm đã vượt quá số lượng trong kho';
 		$this->redirect('index.php?mod=home&act=listCart');
 	}
 	// Xác nhận đơn hàng vs địa chỉ giao
 	public function Order()
 	{
-
-		// if (($products['amount'] = $_SESSION['carts'][$msp]['amount'] - $_SESSION['carts'][$msp]['quality']) > 0) {
-		// echo "<pre>";
-		// print_r($_POST['products']);
-		// echo "</pre>";
-		// die();
-		// if($_SESSION['carts'][$id]['soluong'] >$_SESSION['carts'][$id]['amount']){
-		// 	$_SESSION['success']['cart'] = 'Sản phẩm đã bị xóa khỏi giỏi hàng';
-		// 	$this->redirect('index.php?mod=home&act=listCart');
-		// }
 		foreach ($_POST['products'] as $id) {
 			if ($_SESSION['carts'][$id]['soluong'] < $_SESSION['carts'][$id]['amount']) {
 				$items[$id] = $_SESSION['carts'][$id];
 			} else {
-				$this->redirect('index.php?mod=home&act=Order1');
+				$this->redirect('index.php?mod=home&act=notification');
 			
 			}
 		}
-
-
 		$data = $_POST;
 		if (isset($_SESSION['auth']['id'])) {
 			$UserModel = new User();
@@ -201,7 +189,6 @@ class HomeController extends BaseController
 
 	public function store()
 	{
-
 		$ProductModel = new Product();
 		$datauser['id'] = $_POST['user_id'];
 		$datauser['sdt'] = $_POST['phone'];
@@ -223,14 +210,20 @@ class HomeController extends BaseController
 		$item = array();
 		for ($i = 0; $i < sizeof($_POST['masp']); $i++) {
 			$products = $ProductModel->find($_POST['masp'][$i]);
-			$products['amount'] = $_POST['soluong'][$i];
-
+		
+			$products['amount']= $products['amount'] - $_POST['soluong'][$i];
+			$products['sold']= $products['sold'] + $_POST['soluong'][$i];
+			$ProductModel = new Product();
+			$ProductModel->update($products);
+		
 			$item[$i]['product_name'] = $products['product_name'];
 			$item[$i]['product_image'] = $products['image'];
 			$item[$i]['price'] = $products['promotionalprice'];
-			$item[$i]['amount'] = $products['amount'];
-			$item[$i]['total'] = $products['promotionalprice'] * $products['amount'];
+			$item[$i]['amount'] = $_POST['soluong'][$i];
+			$item[$i]['total'] = $products['promotionalprice'] * $_POST['soluong'][$i];
 			$item[$i]['order_id'] = $LastId;
+
+
 			$OrderDetailModel = new Orderdetail();
 			$success = $OrderDetailModel->create($item[$i]);
 		}

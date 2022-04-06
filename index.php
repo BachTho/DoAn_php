@@ -1,12 +1,6 @@
 <?php 
 require_once('helpers/helpers.php');
-
-// require_once('controlllers/PostController.php');
-// require_once('controlllers/CategoryController.php');
 session_start();
-
-// var_dump($_SESSION['auth']);
-// die();
 $mod="home";
 $act="index";
 if(isset($_GET['mod'])){
@@ -23,9 +17,9 @@ if(!file_exists($path)){
 	exit();
 }
 require_once($path);
-// $controller_obj = new CategoryController();
-// $controller_obj->index();
+
 
 $controller_obj = new $class_name();
 $controller_obj->$act();
+
 ?>

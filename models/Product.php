@@ -15,7 +15,7 @@ class Product extends Query
 	public function getPostsbyid($id)
 	{
 		$query = "SELECT products.*  FROM products inner join categories on products.category_id = categories.id
-	WHERE products.status = 1 and products.category_id =" . $id;
+	WHERE products.status = 1 and products.amount  > 0  and products.category_id =" . $id;
 
 
 		$result = $this->conn->query($query);
@@ -28,6 +28,24 @@ class Product extends Query
 		};
 		return $data;
 	}
+
+		// lay du lieu post theo so luong con
+		public function getPostsbyAmount()
+		{
+			$query = "SELECT products.*  FROM products inner join categories on products.category_id = categories.id
+		WHERE products.amount  > 0 and products.status = 1 ";
+	
+	
+			$result = $this->conn->query($query);
+			// Buoc 3
+			// Tạo 1 mảng để chứa dữ liệu
+			$data = array();
+	
+			while ($row = $result->fetch_assoc()) {
+				$data[] = $row;
+			};
+			return $data;
+		}
 
 
 	// lay ra 3 sản phẩm có lượt xem nhiều nhất
@@ -113,13 +131,18 @@ class Product extends Query
 	// tim theo search trag admin
 	public function findproductsadmin($id)
 	{
-
 		$products = $this->whereLike($this->table, ['product_name' => "$id"]);
 
 		return $products;
 	}
 
+// tim theo search trag front end
+public function findproductsFrontEnd($id)
+{
+	$products = $this->whereLikeFrontEnd($this->table, ['product_name' => "$id"]);
 
+	return $products;
+}
 
 	//   // lay du lieu theo id
 	public function getSum($id)

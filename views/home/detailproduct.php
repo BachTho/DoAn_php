@@ -7,8 +7,6 @@ require_once('views/partials/Headeruser.php');
 <div class="product_image_area mb-5">
     <div class="container">
         <div class="row s_product_inner">
-
-
             <div class="col-lg-6">
                 <div class="s_product_img">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -56,6 +54,8 @@ require_once('views/partials/Headeruser.php');
                     <div class="card_area">
                         <a class="main_btn" href="index.php?mod=home&act=listCart&&action=1&msp=<?= $DetailProduct['id'] ?> ">Add to Cart</a>
                     </div>
+
+
                     <!-- <form class="sign-up-form form" action="index.php?mod=home&act=store" method="POST" role="form" enctype="multipart/form-data">
                         <input type="hidden" name="id_product" value="">
                         <input type="number" name="amount" value="1">
@@ -68,6 +68,7 @@ require_once('views/partials/Headeruser.php');
         </div>
     </div>
 </div>
+
 
 <?php
 require_once('views/partials/Footeruser.php');

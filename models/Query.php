@@ -72,6 +72,36 @@ class Query
 		return $lastid;
 	}
 
+	//  where like
+	protected function whereLikeFrontEnd($table, $where = [])
+	{
+
+		$query = "SELECT * from $table WHERE  ";
+		$string = '';
+		$i = 0;
+
+		foreach ($where as $column => $value) {
+
+			$i++;
+			$string .= "amount > 0 and $column like " . " '%" . $value . "%'";
+
+			if ($i != count($where)) { // Nếu không phải là giá trị cuối cùng thì mới thêm dấu ,
+				$string .= " AND ";
+			}
+		}
+
+		$query .= $string;
+
+		
+		$result = $this->conn->query($query);
+
+		$data = array();
+		while ($row = $result->fetch_assoc()) {
+			$data[] = $row;
+		}
+		return $data;
+	}
+
 
 
 	//  where like
@@ -107,7 +137,8 @@ class Query
 	// HÀM sắp xếp sản phẩm
 	protected function Arrange($table, $lệnh, $where = [])
 	{
-		$query = "SELECT * from $table ORDER BY ";
+		$query = "SELECT * from $table where status= 1 and amount > 0  ORDER BY ";
+		
 		$string = '';
 		$i = 0;
 		foreach ($where as $column) {

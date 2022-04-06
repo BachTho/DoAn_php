@@ -89,6 +89,11 @@
   toastr.success('<?php echo $_SESSION['success']['cart'] ?>')
    
   <?php } ?>
+  <?php
+  if (!empty($_SESSION['error']['cart'])) { ?>
+  toastr.error('<?php echo $_SESSION['error']['cart'] ?>')
+   
+  <?php } ?>
 </script>
 </body>
 
@@ -96,5 +101,8 @@
 <?php
 if (!empty($_SESSION['success'])) {
   unset($_SESSION['success']);
+}
+if (!empty($_SESSION['error'])) {
+  unset($_SESSION['error']);
 }
 ?>
