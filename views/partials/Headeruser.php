@@ -79,7 +79,6 @@
 													<a class="nav-link" href="index.php?mod=home&act=productbycategory&id=<?= $category['id'] ?>"><?= $category['category_name'] ?></a>
 												</li>
 											<?php } ?>
-
 										</ul>
 									</li>
 									<li class="nav-item ">
@@ -95,14 +94,6 @@
 							<div class="col-lg-5 pr-0">
 								<ul class="nav navbar-nav navbar-right right_nav pull-right">
 									<li class="nav-item">
-										<!-- <a href="#" class="icons">
-											<i class="ti-search" aria-hidden="true"></i>
-										</a> -->
-										<!-- <form class=" nav-link form-inline my-2 my-lg-0">
-											<input class="form-control mr-sm-2" type="search" placeholder="Search">
-											<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-										</form> -->
-
 										<form method="POST" class="example mt-4" action="index.php?mod=home&act=listProductBySearch" style="margin:auto;max-width:300px">
 											<input type="text" placeholder="Tìm sản phẩm..." name="product_name">
 											<button type="submit"><i class="fa fa-search"></i></button>
@@ -125,11 +116,9 @@
 												if ($_SESSION['auth']['role_id'] == 2) {
 											?>
 													<li class="nav-item">
-														<a class="nav-link" href="category.html"> <?= $_SESSION['auth']['fullname'] ?></a>
+														<a class="nav-link"> <?= $_SESSION['auth']['fullname'] ?></a>
 													</li>
-													<li class="nav-item">
-														<a class="nav-link" href="#"> <i class="fas fa-user"> Thông tin</i></a>
-													</li>
+													
 													<li class="nav-item">
 														<a href="index.php?mod=home&act=listOrder&id_user=<?= $_SESSION['auth']['id'] ?>" class="icons">
 														<i class="fa fa-shopping-bag"></i>	Đơn hàng
@@ -143,14 +132,12 @@
 													</li>
 												<?php } else { ?>
 													<li class="nav-item">
-														<a class="nav-link" href="category.html"> Chào <?= $_SESSION['auth']['fullname'] ?></a>
+														<a class="nav-link" > Chào <?= $_SESSION['auth']['fullname'] ?></a>
 													</li>
 													<li class="nav-item">
 														<a class="nav-link" href="index.php?mod=category&act=index"><i class="fa fa-cogs"></i> Trang quản lý</a>
 													</li>
-													<li class="nav-item">
-														<a class="nav-link" href="#"> <i class="fas fa-user"></i> Thông tin</a>
-													</li>
+												
 													<li class="nav-item">
 														<a  class="nav-link" href="index.php?mod=home&act=listOrder&id_user=<?= $_SESSION['auth']['id'] ?>" class="icons">
 														<i class="fa fa-shopping-bag"></i>	Đơn hàng

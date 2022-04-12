@@ -40,7 +40,7 @@ require_once('views/partials/Footertop.php');
 							foreach ($ListOrder as $order) { ?>
 								<tr>
 									<td><?= $order['id'] ?></td>
-									<td><?= $order['total'] ?></td>
+									<td><?= number_format($order['total']) ?></td>
 									<td><?= $order['status'] ?></td>
 									<td><?= date('d/m/Y', strtotime($order['create_at'])) ?></td>
 									<td>

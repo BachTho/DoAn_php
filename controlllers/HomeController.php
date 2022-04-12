@@ -275,8 +275,9 @@ class HomeController extends BaseController
 			$Order['status'] = 3;
 		}
 
-		$update = $OrderModel->update($Order);
-
+		$OrderModel->update($Order);
+	
+		$_SESSION['success']['delivery'] =  'Hy vọng bạn sẽ tiếp tục ủng hộ shop <3';
 		$this->redirect('index.php?mod=home&act=index');
 	}
 

@@ -49,7 +49,7 @@ require_once('views/partials/Headeruser.php');
                             <div class="col-lg-4 col-md-6">
                                 <div class="single-product">
                                     <div class="product-img">
-                                        <img class="card-img" src="assets/image/<?= $product['image'] ?>" alt="" />
+                                        <img height="450px" class="card-img" src="assets/image/<?= $product['image'] ?>" alt="" />
                                         <div class="p_icon">
                                             <a href="index.php?mod=home&act=detailProduct&id=<?= $product['id'] ?>">
                                                 <i class="ti-eye"></i>

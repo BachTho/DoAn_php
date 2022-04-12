@@ -46,7 +46,7 @@ require_once('views/partials/Headeruser.php');
                                 <span>Danh mục:</span> <b style="color:#2a2a2a"><?= $DetailProduct['categoryname'] ?></b></a>
                         </li>
                         <li>
-                            <a href="#"> <span>Lượt xem:</span><?= $DetailProduct['view_count'] ?></a>
+                            <a href="#"> <span>Đã bán:</span><b> <?= $DetailProduct['sold'] ?></b></a>
                         </li>
                     </ul>
 
@@ -55,13 +55,6 @@ require_once('views/partials/Headeruser.php');
                         <a class="main_btn" href="index.php?mod=home&act=listCart&&action=1&msp=<?= $DetailProduct['id'] ?> ">Add to Cart</a>
                     </div>
 
-
-                    <!-- <form class="sign-up-form form" action="index.php?mod=home&act=store" method="POST" role="form" enctype="multipart/form-data">
-                        <input type="hidden" name="id_product" value="">
-                        <input type="number" name="amount" value="1">
-                        <button type="submit" class="form-btn primary-default-btn transparent-btn">Thêm danh mục</button>
-
-                    </form> -->
                 </div>
             </div>
 

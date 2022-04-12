@@ -55,8 +55,8 @@ require_once('views/partials/Footertop.php');
 
 									</td>
 
-									<td><?= $product['originalprice'] ?></td>
-									<td><?= $product['promotionalprice'] ?></td>
+									<td><?=number_format( $product['originalprice']) ?> đ</td>
+									<td><?= number_format($product['promotionalprice']) ?> đ</td>
 
 									<td><?= $product['amount'] ?></td>
 									<td><?= $product['username'] ?></td>

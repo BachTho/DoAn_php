@@ -44,9 +44,9 @@ require_once('views/partials/Footertop.php');
                                         </div>
 
                                     </td>
-                                    <td><?= $order['price'] ?></td>
+                                    <td><?= number_format($order['price']) ?></td>
                                     <td><?= $order['amount'] ?></td>
-                                    <td><?= $order['total'] ?></td>
+                                    <td><?= number_format($order['total']) ?></td>
 
                                     <td>
                                         <span class="p-relative">
