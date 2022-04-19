@@ -109,7 +109,7 @@
         <a href="##" class="sidebar-user">
             <span class="sidebar-user-img">
                 <picture>
-                    <source srcset="assets/image/<?= $_SESSION['auth']['image'] ?>"><img src="assets/image/<?= $_SESSION['auth']['image'] ?>" alt="User name">
+                    <source srcset="assets/image/<?= $_SESSION['auth']['image'] ?>"><img src="assets/image/<?= $_SESSION['auth']['image'] ?>" alt="Ảnh user">
                 </picture>
             </span>
             <div class="sidebar-user-info">

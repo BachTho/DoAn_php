@@ -49,7 +49,7 @@ require_once('views/partials/Headeruser.php');
                                     <p><?= $value['product_name'] ?></p>
                                 </td>
                                 <td>
-                                    <img style="width:100px; height:100px" src="assets/image/<?= $value['product_image'] ?>" alt="" />
+                                    <img style="width:100px; height:100px" src="assets/image/<?= $value['product_image'] ?>" alt="chi tiết sản phẩm đặt" />
                                 </td>
                                 <td>
                                     <h5><?= number_format($value['price']) ?> đ</h5>

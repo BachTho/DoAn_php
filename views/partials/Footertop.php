@@ -23,7 +23,7 @@
              <span class="nav-user-img">
 
                <picture>
-                 <source srcset="assets/image/<?= $_SESSION['auth']['image'] ?>"><img src="assets/image/<?= $_SESSION['auth']['image'] ?>" alt="User name">
+                 <source srcset="assets/image/<?= $_SESSION['auth']['image'] ?>"><img src="assets/image/<?= $_SESSION['auth']['image'] ?>" alt="Ảnh user">
                </picture>
              </span>
            </button>

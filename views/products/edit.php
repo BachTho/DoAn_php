@@ -67,7 +67,7 @@ require_once('views/partials/Footertop.php');
 <div class="form-group">
    <label class="form-label-wrapper">
     <p class="form-label">Ảnh sản phẩm thứ 1</p>
-    <img src="assets/image/<?= $success['image'] ?>" alt="" width="150px" height="150px " style="margin-bottom:1%">
+    <img src="assets/image/<?= $success['image'] ?>" alt="Ảnh sản phẩm thứ 1" width="150px" height="150px " style="margin-bottom:1%">
     <input type="file" class="form-input" id="" placeholder="" name="image" value="<?= $success['image'] ?>">
 </label>
 </div>
@@ -75,7 +75,7 @@ require_once('views/partials/Footertop.php');
 <div class="form-group">
    <label class="form-label-wrapper">
     <p class="form-label">Ảnh sản phẩm thứ 2</p>
-    <img src="assets/image/<?= $success['image1'] ?>" alt="" width="150px" height="150px " style="margin-bottom:1%">
+    <img src="assets/image/<?= $success['image1'] ?>" alt="Ảnh sản phẩm thứ 2" width="150px" height="150px " style="margin-bottom:1%">
     <input type="file" class="form-input" id="" placeholder="" name="image1" value="<?= $success['image1'] ?>">
 </label>
 </div>
@@ -84,7 +84,7 @@ require_once('views/partials/Footertop.php');
 <div class="form-group">
    <label class="form-label-wrapper">
     <p class="form-label">Ảnh sản phẩm thứ 3</p>
-    <img src="assets/image/<?= $success['image2'] ?>" alt="" width="150px" height="150px " style="margin-bottom:1%">
+    <img src="assets/image/<?= $success['image2'] ?>"alt="Ảnh sản phẩm thứ 3" width="150px" height="150px " style="margin-bottom:1%">
     <input type="file" class="form-input" id="" placeholder="" name="image2" value="<?= $success['image2'] ?>">
 </label>
 </div>

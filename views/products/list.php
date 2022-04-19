@@ -49,7 +49,7 @@ require_once('views/partials/Footertop.php');
 									<td>
 										<div class="categories-table-img">
 											<picture>
-												<source srcset="assets/image/<?= $product['image'] ?>"><img src="assets/image/<?= $product['image'] ?>" alt="post">
+												<source srcset="assets/image/<?= $product['image'] ?>"><img src="assets/image/<?= $product['image'] ?>" alt="Ảnh sản phẩm ">
 											</picture>
 										</div>
 

@@ -61,7 +61,7 @@ require_once('views/partials/Headeruser.php');
                                         </td>
                                         <td>
 
-                                            <img style="width:100px; height:100px" src="assets/image/<?= $value['image'] ?>" alt="" />
+                                            <img style="width:100px; height:100px" src="assets/image/<?= $value['image'] ?>" alt="Sản phẩm đã thêm vào giỏ hàng" />
                                         </td>
                                         <td>
                                             <h5><?= number_format($value['promotionalprice']) ?> đ</h5>

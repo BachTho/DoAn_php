@@ -294,6 +294,12 @@ class HomeController extends BaseController
 		$ListOrderDetails = $OrderDetailModel->getOrderDetailbyid($id);
 		require_once('views/home/detailorder.php');
 	}
+
+	// chức năng livestream
+	public function livestream(){
+		require_once('views/home/livestream.php');
+	}
+
 	// về chúng tôi
 	public function about()
 	{

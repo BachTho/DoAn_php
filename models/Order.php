@@ -27,7 +27,6 @@ class Order extends Query
     public function findOrderByStatusProcessing()
     {
         $orders = $this->whereLike($this->table, ['status' => "0"]);
-
         return $orders;
     }
 

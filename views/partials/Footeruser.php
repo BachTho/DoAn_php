@@ -68,21 +68,12 @@
 <script src="assets/home/vendors/counter-up/jquery.counterup.js"></script>
 <script src="assets/home/js/mail-script.js"></script>
 <script src="assets/home/js/theme.js"></script>
-<script>
-  var list = document.getElementsById("idqty");
-  console.log(list);
-</script>
+
 <!-- in ra thong bao -->
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 <script>
-  // $('#click').on('click',function(){
-  //   swal.fire(
-  //     'tho pro',
-  //     'tho dep zai',
-  //     'cau tra loi'
-  //   )
-  // })
+
   
   <?php
   if (!empty($_SESSION['success']['cart'])) { ?>

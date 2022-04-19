@@ -112,12 +112,4 @@ class UserController extends AdminController
 
 
 
-	// public function detail(){
-	// 	$id = $_GET['id'];
-	// 	$user = new User();
-	// 	$users = $user->find($id);
-	// 	$this->view('auth/detail.php',[
-	// 		'users' =>$users,
-	// 	]);
-	// }
 }

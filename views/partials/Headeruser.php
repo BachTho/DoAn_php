@@ -85,6 +85,10 @@
 										<a class="nav-link" href="index.php?mod=home&act=listProduct">Sản phẩm</a>
 									</li>
 
+									<li class="nav-item ">
+										<a class="nav-link" href="index.php?mod=home&act=livestream">Livestream</a>
+									</li>
+
 									<li class="nav-item">
 										<a class="nav-link" href="index.php?mod=home&act=about">Giới thiệu</a>
 									</li>

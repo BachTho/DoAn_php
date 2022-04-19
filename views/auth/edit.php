@@ -76,7 +76,7 @@ require_once('views/partials/Footertop.php');
    
    <label class="form-label-wrapper">
     <p class="form-label">Ảnh</p>
-    <img src="assets/image/<?= $success['image'] ?>" alt="" width="150px" height="150px " style="margin-bottom:1%">
+    <img src="assets/image/<?= $success['image'] ?>" alt="" width="150px" height="150px " style="margin-bottom:1%" alt="ảnh sản phẩm cập nhật">
     <input type="file" class="form-input" id="" placeholder="" name="image" value="<?= $success['image'] ?>">
   </label>
 </div>

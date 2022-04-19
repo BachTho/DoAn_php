@@ -18,7 +18,6 @@ if(!file_exists($path)){
 }
 require_once($path);
 
-
 $controller_obj = new $class_name();
 $controller_obj->$act();
 

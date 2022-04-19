@@ -27,30 +27,14 @@ require_once('views/partials/Headeruser.php');
 <section class="cat_product_area section_gap">
     <div class="container">
         <div class="row flex-row-reverse">
-            <div class="col-lg-9">
-                <!-- <div class="product_top_bar">
-                    <div class="left_dorp">
-                        <select class="sorting">
-                            <option value="1">Default sorting</option>
-                            <option value="2">Default sorting 01</option>
-                            <option value="4">Default sorting 02</option>
-                        </select>
-                        <select class="show">
-                            <option value="1">Show 12</option>
-                            <option value="2">Show 14</option>
-                            <option value="4">Show 16</option>
-                        </select>
-                    </div>
-                </div> -->
-
+            <div class="col-lg-9"> 
                 <div class="latest_product_inner ">
                     <div class="row">
-
                         <?php foreach (listproducts() as $product) { ?>
                             <div class="col-lg-4 col-md-6">
                                 <div class="single-product">
                                     <div class="product-img">
-                                        <img height="350px" class="card-img" src="assets/image/<?= $product['image'] ?>" alt="" />
+                                        <img height="350px" class="card-img" src="assets/image/<?= $product['image'] ?>" alt="hình sản phẩm của cửa hàng" />
                                         <div class="p_icon">
                                             <a href="index.php?mod=home&act=detailProduct&id=<?= $product['id'] ?>">
                                                 <i class="ti-eye"></i>

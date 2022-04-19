@@ -34,8 +34,6 @@ class Product extends Query
 		{
 			$query = "SELECT products.*  FROM products inner join categories on products.category_id = categories.id
 		WHERE products.amount  > 0 and products.status = 1 ";
-	
-	
 			$result = $this->conn->query($query);
 			// Buoc 3
 			// Tạo 1 mảng để chứa dữ liệu

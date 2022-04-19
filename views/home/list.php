@@ -80,13 +80,12 @@ require_once('views/partials/Headeruser.php');
           </div>
         </div>
       </div>
-
       <div class="row">
         <?php foreach ($ListProductsTop3ByViewCount as $product) { ?>
         <div class="col-lg-4 col-md-6">
           <div class="single-product">
             <div class="product-img">
-              <img style="height: 450px;"  class="img-fluid w-100" src="assets/image/<?= $product['image'] ?>" alt="" />
+              <img style="height: 450px;" class="img-fluid w-100" src="assets/image/<?= $product['image'] ?>" alt="Sản phẩm bán chạy" />
               <div class="p_icon">
                 <a href="index.php?mod=home&act=detailProduct&id=<?= $product['id'] ?>">
                   <i class="ti-eye"></i>
@@ -137,7 +136,7 @@ require_once('views/partials/Headeruser.php');
             <h5 class="text-uppercase"> <?= $product['categoryname'] ?></h5>
             <h3 class="text-uppercase"><a href="index.php?mod=home&act=detailProduct&id=<?= $product['id'] ?>"> <b style="color:black"><?= $product['product_name'] ?></b></a></h3>
             <div class="mb-3" >
-            <a href="index.php?mod=home&act=detailProduct&id=<?= $product['id'] ?>">  <img style="height: 400px;" class="img-fluid" src="assets/image/<?= $product['image1'] ?>" alt="" />
+            <a href="index.php?mod=home&act=detailProduct&id=<?= $product['id'] ?>">  <img style="height: 400px;" class="img-fluid" src="assets/image/<?= $product['image1'] ?>" alt="Sản phẩm mới mở bán" />
             </a> </div>
             <h4><?= number_format($product['promotionalprice']) ?> đ</h4>
             <a href="index.php?mod=home&act=listCart&&action=1&msp=<?= $product['id'] ?> " class="main_btn">Add to cart</a>
@@ -150,7 +149,7 @@ require_once('views/partials/Headeruser.php');
             <div class="col-lg-6 col-md-6">
               <div class="single-product">
                 <div class="product-img">
-                  <img style="height: 272px;" class="img-fluid w-100" src="assets/image/<?= $product['image1'] ?>" alt="" />
+                  <img style="height: 272px;" class="img-fluid w-100" src="assets/image/<?= $product['image1'] ?>" alt="Sản phẩm mới mở bán" />
                   <div class="p_icon">
                     <a href="index.php?mod=home&act=detailProduct&id=<?= $product['id'] ?>">
                       <i class="ti-eye"></i>

@@ -12,24 +12,24 @@ require_once('views/partials/Headeruser.php');
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
-                                <img style="width: 60px; height:60px " src="assets/image/<?= $DetailProduct['image'] ?>" alt="" />
+                                <img style="width: 60px; height:60px " src="assets/image/<?= $DetailProduct['image'] ?>" alt="ảnh sản phẩm thứ 1" />
                             </li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="1">
-                                <img style="width: 60px; height:60px " src="assets/image/<?= $DetailProduct['image1'] ?>" alt="" />
+                                <img style="width: 60px; height:60px " src="assets/image/<?= $DetailProduct['image1'] ?>" alt="ảnh sản phẩm thứ 2" />
                             </li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="2">
-                                <img style="width: 60px; height:60px " src="assets/image/<?= $DetailProduct['image2'] ?>" alt="" />
+                                <img style="width: 60px; height:60px " src="assets/image/<?= $DetailProduct['image2'] ?>" alt="ảnh sản phẩm thứ 3" />
                             </li>
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img height="580px" class="d-block w-100" src="assets/image/<?= $DetailProduct['image'] ?>" alt="First slide" />
+                                <img height="580px" class="d-block w-100" src="assets/image/<?= $DetailProduct['image'] ?>" alt="ảnh sản phẩm thứ 1" />
                             </div>
                             <div class="carousel-item">
-                                <img height="580px" class="d-block w-100" src="assets/image/<?= $DetailProduct['image1'] ?>" alt="Second slide" />
+                                <img height="580px" class="d-block w-100" src="assets/image/<?= $DetailProduct['image1'] ?>" alt="ảnh sản phẩm thứ 2" />
                             </div>
                             <div class="carousel-item">
-                                <img height="580px" class="d-block w-100" src="assets/image/<?= $DetailProduct['image2'] ?>" alt="Third slide" />
+                                <img height="580px" class="d-block w-100" src="assets/image/<?= $DetailProduct['image2'] ?>" alt="ảnh sản phẩm thứ 3" />
                             </div>
                         </div>
                     </div>
